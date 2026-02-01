@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTO AI-Director | Pro Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>TTO AI-Director</h1>
+            </div>
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>Brain Sync: Active (00_バズの本質)</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="tiktok-url">Reference TikTok URL</label>
+                    <input type="text" id="tiktok-url" placeholder="https://vt.tiktok.com/..." class="glass-input">
+                </div>
+                <div class="input-group">
+                    <label for="product-name">Target Product</label>
+                    <input type="text" id="product-name" placeholder="商品名を入力" class="glass-input">
+                </div>
+                <button id="generate-btn" class="primary-btn">
+                    <span class="btn-text">構成案を生成する</span>
+                    <span class="btn-shine"></span>
+                </button>
+            </section>
+
+            <section id="result-section" class="hidden">
+                <div class="section-header">
+                    <h2>Generated Post Strategy</h2>
+                    <div class="badge">点数診断型 FMT</div>
+                </div>
+
+                <div class="slides-grid" id="slides-container">
+                    <!-- Slides will be generated here -->
+                </div>
+
+                <div class="analytics-report glass-card">
+                    <h3>AI-Director's Analysis</h3>
+                    <p id="analysis-text">分析中...</p>
+                </div>
+
+                <div class="caption-box glass-card">
+                    <h3>Caption & Hashtags</h3>
+                    <div class="copy-area">
+                        <code id="caption-content"></code>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 SOCIAL GREEN TECH | AI-Driven Marketing Tool</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
