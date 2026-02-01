@@ -56,7 +56,7 @@ document.getElementById('generate-btn').addEventListener('click', function () {
 
     // AI解析とナレッジ注入をブラウザ内で完結
     setTimeout(() => {
-        const strategy = JSON.parse(JSON.stringify(BuzzKnowledge[fmt]));
+        const strategy = BuzzKnowledge[fmt];
         const generatedData = {
             format: strategy.name,
             analysis: strategy.analysis,
