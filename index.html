@@ -28,16 +28,28 @@
 
         <main>
             <section class="input-section">
-                <div class="input-group">
-                    <label for="tiktok-url">Reference TikTok URL</label>
-                    <input type="text" id="tiktok-url" placeholder="https://vt.tiktok.com/..." class="glass-input">
+                <div class="input-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px;">
+                    <div class="input-group">
+                        <label for="tiktok-url">Reference TikTok URL</label>
+                        <input type="text" id="tiktok-url" placeholder="https://vt.tiktok.com/..." class="glass-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="product-name">Target Product</label>
+                        <input type="text" id="product-name" placeholder="商品名を入力" class="glass-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="fmt-select">Select Post FMT</label>
+                        <select id="fmt-select" class="glass-input"
+                            style="width: 100%; background: rgba(255,255,255,0.05); color: white; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 12px;">
+                            <option value="score">点数診断系 (0/1/2点)</option>
+                            <option value="binary">二項対立 (神vsゴミ)</option>
+                            <option value="ranking">ランキング形式 (5選など)</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="product-name">Target Product</label>
-                    <input type="text" id="product-name" placeholder="商品名を入力" class="glass-input">
-                </div>
-                <button id="generate-btn" class="primary-btn">
-                    <span class="btn-text">構成案を生成する</span>
+                <button id="generate-btn" class="primary-btn" style="width: 100%;">
+                    <span class="btn-text">構成案を自動生成する</span>
                     <span class="btn-shine"></span>
                 </button>
             </section>
@@ -45,7 +57,7 @@
             <section id="result-section" class="hidden">
                 <div class="section-header">
                     <h2>Generated Post Strategy</h2>
-                    <div class="badge">点数診断型 FMT</div>
+                    <div class="badge">-- FMT --</div>
                 </div>
 
                 <div class="slides-grid" id="slides-container">
@@ -54,7 +66,7 @@
 
                 <div class="analytics-report glass-card">
                     <h3>AI-Director's Analysis</h3>
-                    <p id="analysis-text">分析中...</p>
+                    <div id="analysis-text" style="color: #a0aec0; line-height: 1.6;">分析中...</div>
                 </div>
 
                 <div class="caption-box glass-card">
@@ -72,7 +84,6 @@
         </footer>
     </div>
 
-    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 
